@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'League Spartan', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-greyish-magenta: hsl(303, 10%, 53%);
+    --light-greyish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* For portrait phones */
+
+body {
+    position: relative;
+    min-height: 100dvh;
+}
+
+.pattern-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pattern-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20% 5%;
+    gap: 5%;
+}
+
+.description-container {
+    text-align: center;
+}
+
+.description-container h1 {
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.description-container p {
+    padding-top: 5%;
+    color: var(--dark-greyish-magenta);
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.rating {
+    display: grid;
+    gap: 0.5em;
+    align-content: center;
+    justify-items: center;
+    background-color: var(--light-greyish-magenta);
+    padding: 5% 0%;
+    border-radius: 10px;
+}
+
+.icon-star-holder {
+    display: flex;
+    gap: 1em;
+}
+
+.rating h4 {
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    padding-bottom: 20%;
+}
+
+.review {
+    display: grid;
+    background: var(--very-dark-magenta);
+    border-radius: 10px;
+    padding: 2em 1em;
+    gap: 1.5em;
+}
+
+.review-header {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 1em;
+}
+
+.review-header .image-holder {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+.review-header img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.review-header h4 {
+    color: var(--white);
+}
+
+.review-header h5 {
+    color: var(--soft-pink);
+    font-weight: 400;
+}
+
+.review p {
+    color: var(--light-greyish-magenta);
+}
+
+
+/* For landscape phones */
+
+@media (width >= 35em) and (height <= 27em) and (orientation: landscape) {}
+
+
+/* For portrait tablets */
+
+@media (width >= 44.5em) and (orientation: portrait) {}
+
+
+/* For landscape tablets */
+
+@media (width >= 62em) and (height <= 64em) and (orientation: landscape) {}
+
+
+/* laptops 1200px and up */
+
+@media (width >= 75em) {}
+
+
+/* desktops 2500px and up */
+
+@media (width >= 156.25em) {}
